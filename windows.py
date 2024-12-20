@@ -10,9 +10,9 @@ def random_mouse_movement():
 
 def switch_windows():
     # Simulate Alt+Tab to switch windows
-    pg.keyDown("cmd")
+    pg.keyDown("alt")
     pg.press("tab")
-    pg.keyUp("cmd")
+    pg.keyUp("alt")
 
 def scroll_randomly():
     pg.scroll(random.randint(-10, 10))
@@ -24,9 +24,9 @@ def switch_tabs():
     pg.keyUp("ctrl")
 
 def type_random_characters():
-    words = ['kodezen', 'wordpress', 'alms', 'github', 'how to do this', 'what is the issue', 'The code is fine'] # Add a nice word dictionary for type something meaningful
-    word = random.choice(words)
-    pg.typewrite(word, interval=random.uniform(0.1, 1.5))
+    chars = 'abcdefghijklmnopqrstuvwxyz'
+    char = random.choice(chars)
+    pg.typewrite(char, interval=random.uniform(0.1, 0.3))
 
 def do_stuff(wait):
     time.sleep(wait)
